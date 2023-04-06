@@ -1,0 +1,247 @@
+---
+Name: linkedpageselement
+---
+MoritzSauer\LinkedPagesElement:
+    #Defines all Layouts
+    Layouts:
+        Slides:
+            #id of layout needs to be the same as the key of this layout
+            #id defines also the name for the special template
+            id: 'Slides'
+            # enable / disable this layout
+            enabled: true
+            # title of this layout. Will be used to identify this in the cms
+            title: 'Slides'
+            # path to Image which will be used in the cms
+            imgPath: 'client/images/Slides.jpg'
+            # define all fields available in the cms for this layout
+            # in some cases you can set here globally settings
+            # example: disable video-autoplay project wide (for this layout) by setting it here to false
+            FieldsVisibleElement:
+                SubTitle: false
+                ButtonCaption: false
+                ButtonLinkedPageID: false
+                Content: false
+            # define all fields available in LinkedPage Object for this layout
+            FieldsVisibleObject:
+                SubTitle: false
+                ExternalLink: true
+                LinkedPageID: true
+                ButtonCaption: true
+                ImageID: true
+                FAIcon: true
+                IconID: true
+                IconSecondaryID: true
+                Content: true
+                BadgeID: false
+                BadgePosition: false
+                VideoAutoPlay: true
+                VideoLoop: true
+                VideoMuted: true
+                VideoControls: true
+                PreviewImageID: true
+                VideoMP4ID: true
+                VideoOGVID: true
+                VideoWEBMID: true
+        ImageTextBoxSlider:
+            #id of layout needs to be the same as the key of this layout
+            #id defines also the name for the special template
+            id: 'ImageTextBoxSlider'
+            # enable / disable this layout
+            enabled: true
+            # title of this layout. Will be used to identify this in the cms
+            title: 'Bild & TextBox Slider'
+            # path to Image which will be used in the cms
+            imgPath: 'client/images/ImageTextBoxSlider.jpg'
+            # define all fields available in the cms for this layout
+            # in some cases you can set here globally settings
+            # example: disable video-autoplay project wide (for this layout) by setting it here to false
+            FieldsVisibleElement:
+                SubTitle: true
+                ButtonCaption: true
+                ButtonLinkedPageID: true
+                Content: false
+            # define all fields available in LinkedPage Object for this layout
+            FieldsVisibleObject:
+                SubTitle: false
+                ExternalLink: true
+                LinkedPageID: true
+                ButtonCaption: true
+                ImageID: true
+                FAIcon: false
+                IconID: false
+                IconSecondaryID: false
+                Content: true
+                BadgeID: false
+                BadgePosition: false
+                VideoAutoPlay: false
+                VideoLoop: false
+                VideoMuted: false
+                VideoControls: false
+                PreviewImageID: false
+                VideoMP4ID: false
+                VideoOGVID: false
+                VideoWEBMID: false
+        CardsSlider:
+            #id of layout needs to be the same as the key of this layout
+            #id defines also the name for the special template
+            id: 'CardsSlider'
+            # enable / disable this layout
+            enabled: true
+            # title of this layout. Will be used to identify this in the cms
+            title: 'Kärtchen Slider'
+            # path to Image which will be used in the cms
+            imgPath: 'client/images/CardsSlider.jpg'
+            # define all fields available in the cms for this layout
+            # in some cases you can set here globally settings
+            # example: disable video-autoplay project wide (for this layout) by setting it here to false
+            FieldsVisibleElement:
+                SubTitle: true
+                ButtonCaption: true
+                ButtonLinkedPageID: true
+                Content: false
+            # define all fields available in LinkedPage Object for this layout
+            FieldsVisibleObject:
+                SubTitle: false
+                ExternalLink: true
+                LinkedPageID: true
+                ButtonCaption: true
+                ImageID: true
+                FAIcon: false
+                IconID: false
+                IconSecondaryID: false
+                Content: true
+                BadgeID: true
+                BadgePosition: true
+                VideoAutoPlay: false
+                VideoLoop: false
+                VideoMuted: false
+                VideoControls: false
+                PreviewImageID: false
+                VideoMP4ID: false
+                VideoOGVID: false
+                VideoWEBMID: false
+        Cards:
+            #id of layout needs to be the same as the key of this layout
+            #id defines also the name for the special template
+            id: 'Cards'
+            # enable / disable this layout
+            enabled: true
+            # title of this layout. Will be used to identify this in the cms
+            title: 'Kacheln nebeneinander'
+            # path to Image which will be used in the cms
+            imgPath: 'client/images/Cards.jpg'
+            # define all fields available in the cms for this layout
+            # in some cases you can set here globally settings
+            # example: disable video-autoplay project wide (for this layout) by setting it here to false
+            FieldsVisibleElement:
+                SubTitle: true
+                ButtonCaption: false
+                ButtonLinkedPageID: false
+                Content: true
+            # define all fields available in LinkedPage Object for this layout
+            FieldsVisibleObject:
+                SubTitle: true
+                ExternalLink: true
+                LinkedPageID: true
+                ButtonCaption: true
+                ImageID: true
+                FAIcon: false
+                IconID: false
+                IconSecondaryID: false
+                Content: true
+                BadgeID: false
+                BadgePosition: false
+                VideoAutoPlay: false
+                VideoLoop: false
+                VideoMuted: false
+                VideoControls: false
+                PreviewImageID: false
+                VideoMP4ID: false
+                VideoOGVID: false
+                VideoWEBMID: false
+        CardsWithoutContent:
+            #id of layout needs to be the same as the key of this layout
+            #id defines also the name for the special template
+            id: 'CardsWithoutContent'
+            # enable / disable this layout
+            enabled: true
+            # title of this layout. Will be used to identify this in the cms
+            title: 'Kacheln ohne Inhalt'
+            # path to Image which will be used in the cms
+            imgPath: 'client/images/CardsWithoutContent.jpg'
+            # define all fields available in the cms for this layout
+            # in some cases you can set here globally settings
+            # example: disable video-autoplay project wide (for this layout) by setting it here to false
+            FieldsVisibleElement:
+                SubTitle: true
+                ButtonCaption: false
+                ButtonLinkedPageID: false
+                Content: false
+            # define all fields available in LinkedPage Object for this layout
+            FieldsVisibleObject:
+                SubTitle: true
+                ExternalLink: true
+                LinkedPageID: true
+                ButtonCaption: false
+                ImageID: true
+                FAIcon: false
+                IconID: false
+                IconSecondaryID: false
+                Content: false
+                BadgeID: false
+                BadgePosition: false
+                VideoAutoPlay: false
+                VideoLoop: false
+                VideoMuted: false
+                VideoControls: false
+                PreviewImageID: false
+                VideoMP4ID: false
+                VideoOGVID: false
+                VideoWEBMID: false
+        CardsWithOverlay:
+            #id of layout needs to be the same as the key of this layout
+            #id defines also the name for the special template
+            id: 'CardsWithOverlay'
+            # enable / disable this layout
+            enabled: true
+            # title of this layout. Will be used to identify this in the cms
+            title: 'Kacheln mit Overlay'
+            # path to Image which will be used in the cms
+            imgPath: 'client/images/CardsWithOverlay.jpg'
+            # define all fields available in the cms for this layout
+            # in some cases you can set here globally settings
+            # example: disable video-autoplay project wide (for this layout) by setting it here to false
+            FieldsVisibleElement:
+                SubTitle: false
+                ButtonCaption: false
+                ButtonLinkedPageID: false
+                Content: false
+            # define all fields available in LinkedPage Object for this layout
+            FieldsVisibleObject:
+                SubTitle: true
+                ExternalLink: false
+                LinkedPageID: false
+                ButtonCaption: false
+                ImageID: true
+                FAIcon: false
+                IconID: false
+                IconSecondaryID: false
+                Content: true
+                BadgeID: false
+                BadgePosition: false
+                VideoAutoPlay: false
+                VideoLoop: false
+                VideoMuted: false
+                VideoControls: false
+                PreviewImageID: false
+                VideoMP4ID: false
+                VideoOGVID: false
+                VideoWEBMID: false
+    # settings for some fields
+    FieldSettings:
+        # height and width of the layout-select images in cms
+        ImageHeight: 100
+        ImageWidth: 195
+        # description to the layout-select in the cms
+        FieldDescription: 'Nach der Auswahl zuerst speichern.'

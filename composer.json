@@ -1,0 +1,29 @@
+{
+  "name":"moritz-sauer-13/linkedpageselement",
+  "description": "Linked Pages Element",
+  "authors": [
+    {
+      "name":"Moritz Sauer - Webentwicklung",
+      "email": "info@moritz-sauer.de"
+    }
+  ],
+  "require":{
+    "silverstripe/recipe-cms": "4.1",
+    "dnadesign/silverstripe-elemental": "^4",
+    "axllent/silverstripe-scss": "^1.8",
+    "unclecheese/silverstripe-image-optionset": "^2.0",
+    "buckleshusky/fontawesomeiconpicker": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "EventCalendar\\": "src/"
+    }
+  },
+  "extra": {
+    "expose": [
+      "client/css",
+      "client/scss",
+      "client/js"
+    ]
+  }
+}

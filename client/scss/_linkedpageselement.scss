@@ -1,0 +1,25 @@
+
+.card__badge {
+  position: absolute;
+  z-index: 20;
+
+  &.TopLeft {
+    top: -2rem;
+    left: 1rem;
+  }
+
+  &.TopRight {
+    top: -2rem;
+    right: 1rem;
+  }
+
+  &.BottomLeft {
+    bottom: -1rem;
+    left: 1rem;
+  }
+
+  &.BottomRight {
+    bottom: -1rem;
+    right: 1rem;
+  }
+}

@@ -1,2 +1,1 @@
-# linkedpageselement
-Silverstripe Linked Pages Element
+# LinkedPages# linkedpageselement-module

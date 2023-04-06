@@ -1,0 +1,64 @@
+/*breakpoints*/
+@mixin mq($query){
+  @if $query == xs{
+    @media screen and (max-width: 575.98px) {
+      @content;
+    }
+  } @else if $query == md{
+    @media screen and (max-width: 767.98px) {
+      @content;
+    }
+  } @else if $query == lg{
+    @media screen and (max-width: 991.98px){
+      @content;
+    }
+  } @else if $query == xl {
+    @media screen and (max-width: 1199.98px){
+      @content;
+    }
+  } @else if $query == xxl{
+    @media screen and (max-width: 1399.98px)   {
+      @content;
+    }
+  } @else if $query == xxxl{
+    @media screen and (max-width: 1599.98px) {
+      @content;
+    }
+  } @else if $query == minxs{
+    @media screen and (min-width: 576px) {
+      @content;
+    }
+  } @else if $query == minmd{
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $query == minlg{
+    @media screen and (min-width: 992px) {
+      @content;
+    }
+  } @else if $query == minxl{
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  } @else if $query == minxxl{
+    @media screen and (min-width: 1400px) {
+      @content;
+    }
+  } @else if $query == minxxxl{
+    @media screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+
+  @else if $query == minlg-max-xl{
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      @content;
+    }
+  }
+
+  @else if $query == minmd-max-lg{
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      @content;
+    }
+  }
+}
