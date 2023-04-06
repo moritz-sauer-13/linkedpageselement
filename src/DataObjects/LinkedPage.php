@@ -35,10 +35,10 @@ class LinkedPage extends DataObject{
         'FAIcon' => 'Text',
         'Content' => 'HTMLText',
         'BadgePosition' => 'Text',
-        'VideoAutoPlay' => 'Boolean(1)',
-        'VideoLoop' => 'Boolean(1)',
-        'VideoMuted' => 'Boolean(1)',
-        'VideoControls' => 'Boolean(1)',
+        'AutoPlay' => 'Boolean(1)',
+        'Loop' => 'Boolean(1)',
+        'Muted' => 'Boolean(1)',
+        'Controls' => 'Boolean(1)',
     ];
 
     private static $has_one = [
@@ -109,13 +109,13 @@ class LinkedPage extends DataObject{
                 ->setDescription('Die Videos werden alternativ zu Bild und Galerie ausgegeben.'),
             UploadField::create('VideoOGV', 'Video (.ogv)'),
             UploadField::create('VideoWEBM', 'Video (.webm)'),
-            CheckboxField::create('VideoAutoPlay', 'Video - Autoplay?')
+            CheckboxField::create('AutoPlay', 'Video - Autoplay?')
                 ->setDescription('Soll das Video automatisch abgespielt werden?'),
-            CheckboxField::create('VideoLoop', 'Video - Endlosschleife?')
+            CheckboxField::create('Loop', 'Video - Endlosschleife?')
                 ->setDescription('Soll das Video automatisch in einer Endlosschleife wiedergegeben werden?'),
-            CheckboxField::create('VideoMuted', 'Video - Stumm?')
+            CheckboxField::create('Muted', 'Video - Stumm?')
                 ->setDescription('Soll das Video ohne Ton wiedergegeben werden?'),
-            CheckboxField::create('VideoControls', 'Video - Steuerung?')
+            CheckboxField::create('Controls', 'Video - Steuerung?')
                 ->setDescription('Sollen die Steuerungselemente des Videos angezeigt werden?')
         ]);
 
