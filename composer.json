@@ -23,6 +23,7 @@
     "expose": [
       "client/css",
       "client/scss",
+      "client/images",
       "client/js"
     ]
   }
