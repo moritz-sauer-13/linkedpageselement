@@ -8,10 +8,10 @@
     }
   ],
   "require":{
-    "silverstripe/recipe-cms": "^4.11",
-    "dnadesign/silverstripe-elemental": "^4",
+    "silverstripe/recipe-cms": "^5",
+    "dnadesign/silverstripe-elemental": "^5",
     "axllent/silverstripe-scss": "^1.8",
-    "unclecheese/silverstripe-image-optionset": "^2.0",
+    "moritz-sauer-13/silverstripe-image-optionset": "^0.1.0",
     "buckleshusky/fontawesomeiconpicker": "^3.0 | ^2"
   },
   "autoload": {
