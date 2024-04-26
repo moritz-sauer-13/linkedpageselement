@@ -18,6 +18,7 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\ToggleCompositeField;
 use SilverStripe\Forms\TreeDropdownField;
+use SilverStripe\LinkField\Form\LinkField;
 use SilverStripe\ORM\DataObject;
 
 class LinkedPage extends DataObject{
@@ -30,8 +31,6 @@ class LinkedPage extends DataObject{
         'SortOrder' => 'Int',
         'Title' => 'Text',
         'SubTitle' => 'Text',
-        'ExternalLink' => 'Text',
-        'ButtonCaption' => 'Text',
         'FAIcon' => 'Text',
         'Content' => 'HTMLText',
         'BadgePosition' => 'Text',
@@ -43,7 +42,7 @@ class LinkedPage extends DataObject{
 
     private static $has_one = [
         'LinkedPagesElement' => LinkedPagesElement::class,
-        'LinkedPage' => SiteTree::class,
+        'LinkedPage' => Link::class,
         'Image' => Image::class,
         'Icon' => Image::class,
         'IconSecondary' => Image::class,
@@ -120,10 +119,7 @@ class LinkedPage extends DataObject{
         ]);
 
         $fields->addFieldsToTab('Root.Links', [
-            TreeDropdownField::create('LinkedPageID', 'Verlinkte Seite', SiteTree::class),
-            TextField::create('ExternalLink', 'Externe Verlinkung')
-                ->setDescription('Muss <strong>mit https://</strong> gepflegt werden.<br>Kann alternative zur verlinkten Seite angegeben werden.'),
-            TextField::create('ButtonCaption', 'Button Beschriftung')
+            LinkField::create('LinkedPage', 'Verlinkte Seite'),
         ]);
 
         $fields->addFieldsToTab('Root.Icon', [
@@ -195,18 +191,8 @@ class LinkedPage extends DataObject{
 
 
     /*Template - Functions*/
-    public function ButtonCaption(){
-        if($this->ButtonCaption != ''){
-            return $this->ButtonCaption;
-        }
-        return _t('LinkedPages.READMORE', 'Mehr erfahren');
-    }
 
     public function showBadge(){
         return $this->getConfigVariable('Layouts', $this->LinkedPagesElement()->ElementStyle)['FieldsVisibleObject']['BadgeID'] && $this->BadgeID > 0;
-    }
-
-    public function showButtonLinkedPage(){
-        return $this->getConfigVariable('Layouts', $this->LinkedPagesElement()->ElementStyle)['FieldsVisibleObject']['ButtonLinkedPageID'] && $this->ButtonLinkedPageID > 0;
     }
 }

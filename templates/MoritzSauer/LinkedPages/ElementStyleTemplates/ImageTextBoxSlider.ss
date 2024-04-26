@@ -16,10 +16,11 @@
                                 <% end_if %>
                             </div>
                         <% end_if %>
-                        <% if $ButtonLinkedPage %>
+                        <% if $LinkedPage %>
                             <div class="col-12 <% if $ShowTitle %>col-md-5 col-lg-3<% end_if %> text-md-end">
-                                <a href="$ButtonLinkedPage.Link" class="">
-                                    $ButtonCaption
+                                <a href="$LinkedPage.URL" class="" <% if $LinkedPage.OpenInNew %>target="_blank"
+                                   rel="noopener noreferrer"<% end_if %>>
+                                    $LinkedPage.Title
                                 </a>
                             </div>
                         <% end_if %>
@@ -28,7 +29,7 @@
             </div>
         <% end_if %>
         <% if $sortedLinkedPages %>
-            <div class="element__linkedpages <% if $ShowTitle || $ButtonLinkedPage %>mt-4 mt-md-5<% end_if %>">
+            <div class="element__linkedpages <% if $ShowTitle || $LinkedPage %>mt-4 mt-md-5<% end_if %>">
                 <div class="swiper-container" id="linkedpages--{$ID}">
                     <div class="swiper-wrapper">
                         <% loop $sortedLinkedPages %>

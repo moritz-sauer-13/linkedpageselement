@@ -3,51 +3,51 @@
     <div class="typography">
         <div class="col__holder items--{$sortedLinkedPages.Count}">
             <% loop $sortedLinkedPages %><div class="linked__page--holder <% if $First %> active <% end_if %>"  data-mobile-target="mobile__content--{$ID}">
-                    <div class="linked__page" style="background-image: url('$Image.FocusFill(2560,1440).Link');
+                <div class="linked__page" style="background-image: url('$Image.FocusFill(2560,1440).Link');
                         background-position: {$Image.PercentageX}% {$Image.PercentageY}%;
                         background-size: cover;">
-                        <div class="linked__page--title">
-                            <div class="linked__page--icon mb-3 mb-md-4">
-                                <% if $Icon %>
-                                    <img src="$Icon.Fit(60,60).Link" class="img-fluid icon">
-                                <% else_if $FAIcon %>
-                                    <i class="$FAIcon"></i>
-                                <% end_if %>
-                            </div>
-                            <div class="page__title--content">
-                                <h2 class="mb-0">
-                                    $Title
-                                </h2>
-                            </div>
-                        </div>
-                        <% if $Content %>
-                            <div class="linked__page--content">
-                                <div class="p-3 p-md-4">
-                                    $Content
-                                    <% include LinkedPagesButton %>
-                                </div>
-                            </div>
-                        <% end_if %>
-                    </div>
-                    <div class="linked__page--passive--title">
-                        <div class="page__title--content">
-                            <span class="h4">
-                                $Title
-                            </span>
-                        </div>
-                        <div class="linked__page--icon">
+                    <div class="linked__page--title">
+                        <div class="linked__page--icon mb-3 mb-md-4">
                             <% if $Icon %>
-                                <% if $IconSecondary %>
-                                    <img src="$IconSecondary.Fit(60,60).Link" class="img-fluid icon">
-                                <% else %>
-                                    <img src="$Icon.Fit(60,60).Link" class="img-fluid icon">
-                                <% end_if %>
+                                <img src="$Icon.Fit(60,60).Link" class="img-fluid icon">
                             <% else_if $FAIcon %>
                                 <i class="$FAIcon"></i>
                             <% end_if %>
                         </div>
+                        <div class="page__title--content">
+                            <h2 class="mb-0">
+                                $Title
+                            </h2>
+                        </div>
                     </div>
-                </div><% end_loop %>
+                    <% if $Content %>
+                        <div class="linked__page--content">
+                            <div class="p-3 p-md-4">
+                                $Content
+                                <% include LinkedPagesButton %>
+                            </div>
+                        </div>
+                    <% end_if %>
+                </div>
+                <div class="linked__page--passive--title">
+                    <div class="page__title--content">
+                            <span class="h4">
+                                $Title
+                            </span>
+                    </div>
+                    <div class="linked__page--icon">
+                        <% if $Icon %>
+                            <% if $IconSecondary %>
+                                <img src="$IconSecondary.Fit(60,60).Link" class="img-fluid icon">
+                            <% else %>
+                                <img src="$Icon.Fit(60,60).Link" class="img-fluid icon">
+                            <% end_if %>
+                        <% else_if $FAIcon %>
+                            <i class="$FAIcon"></i>
+                        <% end_if %>
+                    </div>
+                </div>
+            </div><% end_loop %>
             <div class="mobile__content--holder position-relative d-block d-md-none">
                 <% loop $sortedLinkedPages %>
                     <div class="mobile__content <% if $First %> active <% end_if %>" id="mobile__content--{$ID}">

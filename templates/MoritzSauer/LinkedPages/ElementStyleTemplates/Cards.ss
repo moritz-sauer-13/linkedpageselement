@@ -1,11 +1,11 @@
 <div class="linked__cards bg-beige py-4 py-md-5 py-lg-6">
     <div class="typography">
-        <% if $ShowTitle || $ButtonLinkedPage %>
+        <% if $ShowTitle || $LinkedPage %>
             <div class="element__header">
                 <div class="container">
                     <div class="row align-items-md-center">
                         <% if $ShowTitle %>
-                            <div class="col-12 <% if $ButtonLinkedPage %>col-md-5 col-lg-4<% end_if %>">
+                            <div class="col-12 <% if $LinkedPage %>col-md-5 col-lg-4<% end_if %>">
                                 <span class="h1">
                                     $Title.RAW
                                 </span>
@@ -16,9 +16,9 @@
                                 <% end_if %>
                             </div>
                         <% end_if %>
-                        <% if $ButtonLinkedPage %>
+                        <% if $LinkedPage %>
                             <div class="col-12 <% if $ShowTitle %>col-md-5 col-lg-3 offset-md-2 offset-lg-5 mt-4 mt-md0 <% end_if %> text-md-end">
-                                <% include LinkedPagesButton LinkedPage=$ButtonLinkedPage %>
+                                <% include LinkedPagesButton %>
                             </div>
                         <% end_if %>
                     </div>
@@ -26,7 +26,7 @@
             </div>
         <% end_if %>
         <% if $sortedLinkedPages %>
-            <div class="element__linkedpages <% if $ShowTitle || $ButtonLinkedPage %>mt-4 mt-md-5<% end_if %>">
+            <div class="element__linkedpages <% if $ShowTitle || $LinkedPage %>mt-4 mt-md-5<% end_if %>">
                 <div class="container">
                     <div class="row">
                         <% loop $sortedLinkedPages %>

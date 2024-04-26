@@ -1,7 +1,7 @@
-<% if $LinkedPage || $ExternalLink %>
+<% if $LinkedPage %>
     <div class="linked__page--button">
-        <a href="<% if $LinkedPage %>$LinkedPage.Link<% else %>$ExternalLink<% end_if %>" <% if $ExternalLink %>target="_blank"<% end_if %>>
-            $ButtonCaption
+        <a href="$LinkedPage.URL" <% if $LinkedPage.OpenInNew %>target="_blank" rel="noopener noreferrer"<% end_if %>>
+            $LinkedPage.Title
         </a>
     </div>
 <% end_if %>

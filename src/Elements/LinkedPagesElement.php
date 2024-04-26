@@ -16,6 +16,8 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\ToggleCompositeField;
 use SilverStripe\Forms\TreeDropdownField;
+use SilverStripe\LinkField\Form\LinkField;
+use SilverStripe\LinkField\Models\Link;
 use SilverStripe\ORM\DataObject;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 use UncleCheese\Forms\ImageOptionsetField;
@@ -23,14 +25,13 @@ use UncleCheese\Forms\ImageOptionsetField;
 class LinkedPagesElement extends BaseElement{
     /*Database*/
     private static $db = [
-        'ButtonCaption' => 'Text',
         'SubTitle' => 'Text',
         'ElementStyle' => 'Text',
         'Content' => 'HTMLText',
     ];
 
     private static $has_one = [
-        'ButtonLinkedPage' => SiteTree::class
+        'LinkedPage' => Link::class
     ];
 
     private static $has_many = [
@@ -57,7 +58,7 @@ class LinkedPagesElement extends BaseElement{
         /*General remove*/
         $fields->removeByName([
             'LinkedPages',
-            'ButtonLinkedPageID',
+            'LinkedPageID',
             'ButtonCaption',
             'LinkedPages',
         ]);
@@ -78,9 +79,7 @@ class LinkedPagesElement extends BaseElement{
         $fields->addFieldsToTab('Root.Main', [
             TextField::create('SubTitle', 'Untertitel'),
             HTMLEditorField::create('Content', 'Inhalt')->setRows(6),
-            TreeDropdownField::create('ButtonLinkedPageID', 'Verlinkte Seite für den Button', SiteTree::class),
-            TextField::create('ButtonCaption', 'Button Beschriftung')
-                ->setDescription('Optional. Standardmäßig wird "Mehr" ausgegeben.'),
+            LinkField::create('LinkedPage', 'Button'),
             GridField::create(
                 'LinkedPages',
                 'Verlinkte Seiten',
@@ -128,12 +127,6 @@ class LinkedPagesElement extends BaseElement{
     }
 
     /*Template - Functions*/
-    public function ButtonCaption(){
-        if($this->ButtonCaption != ''){
-            return $this->ButtonCaption;
-        }
-        return _t('LinkedPages.READMORE', 'Mehr erfahren');
-    }
 
     public function Title()
     {

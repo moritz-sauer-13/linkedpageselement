@@ -1,6 +1,6 @@
 <div class="cardswithoverlay py-4 py-md-5 py-lg-6">
     <div class="typography">
-        <% if $ShowTitle || $ButtonLinkedPage %>
+        <% if $ShowTitle %>
             <div class="element__header">
                 <div class="container">
                     <div class="row">
@@ -21,7 +21,7 @@
             </div>
         <% end_if %>
         <% if $sortedLinkedPages %>
-            <div class="element__linkedpages <% if $ShowTitle || $ButtonLinkedPage %>mt-4 mt-md-5<% end_if %>">
+            <div class="element__linkedpages <% if $ShowTitle %>mt-4 mt-md-5<% end_if %>">
                 <div class="container">
                     <div class="row">
                         <% loop $sortedLinkedPages %>
@@ -43,7 +43,7 @@
                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                        $Content
+                                                            $Content
                                                         </div>
                                                     </div>
                                                 </div>
