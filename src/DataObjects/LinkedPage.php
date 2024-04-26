@@ -20,6 +20,7 @@ use SilverStripe\Forms\ToggleCompositeField;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\LinkField\Form\LinkField;
 use SilverStripe\ORM\DataObject;
+use SilverStripe\LinkField\Models\Link;
 
 class LinkedPage extends DataObject{
 
