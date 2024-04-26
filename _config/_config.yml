@@ -55,7 +55,6 @@ MoritzSauer\LinkedPagesElement:
             # example: disable video-autoplay project wide (for this layout) by setting it here to false
             FieldsVisibleElement:
                 SubTitle: true
-                ButtonCaption: true
                 LinkedPageID: true
                 Content: false
             # define all fields available in LinkedPage Object for this layout
@@ -92,7 +91,6 @@ MoritzSauer\LinkedPagesElement:
             # example: disable video-autoplay project wide (for this layout) by setting it here to false
             FieldsVisibleElement:
                 SubTitle: true
-                ButtonCaption: true
                 LinkedPageID: true
                 Content: false
             # define all fields available in LinkedPage Object for this layout
@@ -129,7 +127,6 @@ MoritzSauer\LinkedPagesElement:
             # example: disable video-autoplay project wide (for this layout) by setting it here to false
             FieldsVisibleElement:
                 SubTitle: true
-                ButtonCaption: false
                 LinkedPageID: false
                 Content: true
             # define all fields available in LinkedPage Object for this layout
@@ -166,7 +163,6 @@ MoritzSauer\LinkedPagesElement:
             # example: disable video-autoplay project wide (for this layout) by setting it here to false
             FieldsVisibleElement:
                 SubTitle: true
-                ButtonCaption: false
                 LinkedPageID: false
                 Content: false
             # define all fields available in LinkedPage Object for this layout
@@ -203,7 +199,6 @@ MoritzSauer\LinkedPagesElement:
             # example: disable video-autoplay project wide (for this layout) by setting it here to false
             FieldsVisibleElement:
                 SubTitle: false
-                ButtonCaption: false
                 LinkedPageID: false
                 Content: false
             # define all fields available in LinkedPage Object for this layout
