@@ -19,15 +19,12 @@ MoritzSauer\LinkedPagesElement:
             # example: disable video-autoplay project wide (for this layout) by setting it here to false
             FieldsVisibleElement:
                 SubTitle: false
-                ButtonCaption: false
-                ButtonLinkedPageID: false
+                LinkedPageID: false
                 Content: false
             # define all fields available in LinkedPage Object for this layout
             FieldsVisibleObject:
                 SubTitle: false
-                ExternalLink: true
                 LinkedPageID: true
-                ButtonCaption: true
                 ImageID: true
                 FAIcon: true
                 IconID: true
@@ -59,14 +56,12 @@ MoritzSauer\LinkedPagesElement:
             FieldsVisibleElement:
                 SubTitle: true
                 ButtonCaption: true
-                ButtonLinkedPageID: true
+                LinkedPageID: true
                 Content: false
             # define all fields available in LinkedPage Object for this layout
             FieldsVisibleObject:
                 SubTitle: false
-                ExternalLink: true
                 LinkedPageID: true
-                ButtonCaption: true
                 ImageID: true
                 FAIcon: false
                 IconID: false
@@ -98,14 +93,12 @@ MoritzSauer\LinkedPagesElement:
             FieldsVisibleElement:
                 SubTitle: true
                 ButtonCaption: true
-                ButtonLinkedPageID: true
+                LinkedPageID: true
                 Content: false
             # define all fields available in LinkedPage Object for this layout
             FieldsVisibleObject:
                 SubTitle: false
-                ExternalLink: true
                 LinkedPageID: true
-                ButtonCaption: true
                 ImageID: true
                 FAIcon: false
                 IconID: false
@@ -137,14 +130,12 @@ MoritzSauer\LinkedPagesElement:
             FieldsVisibleElement:
                 SubTitle: true
                 ButtonCaption: false
-                ButtonLinkedPageID: false
+                LinkedPageID: false
                 Content: true
             # define all fields available in LinkedPage Object for this layout
             FieldsVisibleObject:
                 SubTitle: true
-                ExternalLink: true
                 LinkedPageID: true
-                ButtonCaption: true
                 ImageID: true
                 FAIcon: false
                 IconID: false
@@ -176,14 +167,12 @@ MoritzSauer\LinkedPagesElement:
             FieldsVisibleElement:
                 SubTitle: true
                 ButtonCaption: false
-                ButtonLinkedPageID: false
+                LinkedPageID: false
                 Content: false
             # define all fields available in LinkedPage Object for this layout
             FieldsVisibleObject:
                 SubTitle: true
-                ExternalLink: true
                 LinkedPageID: true
-                ButtonCaption: false
                 ImageID: true
                 FAIcon: false
                 IconID: false
@@ -215,14 +204,12 @@ MoritzSauer\LinkedPagesElement:
             FieldsVisibleElement:
                 SubTitle: false
                 ButtonCaption: false
-                ButtonLinkedPageID: false
+                LinkedPageID: false
                 Content: false
             # define all fields available in LinkedPage Object for this layout
             FieldsVisibleObject:
                 SubTitle: true
-                ExternalLink: false
                 LinkedPageID: false
-                ButtonCaption: false
                 ImageID: true
                 FAIcon: false
                 IconID: false
