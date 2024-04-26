@@ -162,7 +162,7 @@ class LinkedPagesElement extends BaseElement{
                 }
                 $options[$layoutID] = [
                     'title' => $layoutVar['title'],
-                    'image' => ($img) ? Director::absoluteBaseURL() . 'resources/' . $img : '',
+                    'image' => ($img) ? Director::absoluteBaseURL() . '/resources/' . $img : '',
                 ];
             }
         }
