@@ -13,7 +13,7 @@
     "axllent/silverstripe-scss": "^1.8",
     "moritz-sauer-13/silverstripe-image-optionset": "^0.1.0",
     "buckleshusky/fontawesomeiconpicker": "^3.0 | ^2",
-    "silverstripe/linkfield": "^3"
+    "silverstripe/linkfield": "^4"
   },
   "autoload": {
     "psr-4": {
