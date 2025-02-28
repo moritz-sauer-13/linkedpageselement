@@ -54,6 +54,10 @@ class LinkedPage extends DataObject{
         'VideoWEBM' => File::class,
     ];
 
+    private static $owns = [
+        'LinkedPage'
+    ];
+
     private static $has_many = [
 
     ];
